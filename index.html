@@ -22,6 +22,8 @@
             line-height: 1.6;
         }
 
+        /* HEADER */
+
         header {
             background: #090909;
             border-bottom: 4px solid #d71920;
@@ -46,6 +48,8 @@
             font-size: 1.05rem;
         }
 
+        /* NAVIGATION */
+
         nav {
             background: #181818;
             text-align: center;
@@ -64,6 +68,8 @@
         nav a:hover {
             color: #d71920;
         }
+
+        /* HERO */
 
         .hero {
             max-width: 1000px;
@@ -101,6 +107,12 @@
             font-weight: bold;
         }
 
+        .button:hover {
+            background: #b9151b;
+        }
+
+        /* MAIN SECTIONS */
+
         .section {
             max-width: 1000px;
             margin: auto;
@@ -113,6 +125,8 @@
             margin-bottom: 30px;
             font-size: 1.7rem;
         }
+
+        /* CARDS */
 
         .cards {
             display: grid;
@@ -139,6 +153,37 @@
             font-size: .95rem;
         }
 
+        /* CLICKABLE ARTICLE CARDS */
+
+        .article-card {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: transform .2s ease, border-color .2s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-3px);
+            border-top-color: #d71920;
+        }
+
+        .article-category {
+            color: #d71920;
+            font-size: .7rem;
+            font-weight: bold;
+            letter-spacing: 1.5px;
+            margin-bottom: 12px;
+        }
+
+        .read-more {
+            color: #d71920;
+            font-weight: bold;
+            margin-top: 18px;
+            font-size: .9rem;
+        }
+
+        /* ABOUT */
+
         .about {
             background: #181818;
         }
@@ -147,6 +192,8 @@
             max-width: 800px;
             color: #bbb;
         }
+
+        /* FOOTER */
 
         footer {
             border-top: 1px solid #333;
@@ -157,11 +204,15 @@
         }
 
         .disclaimer {
-            margin-top: 12px;
+            max-width: 850px;
+            margin: 12px auto 0;
             font-size: .75rem;
         }
 
+        /* MOBILE */
+
         @media(max-width:600px) {
+
             .logo {
                 font-size: 2.2rem;
             }
@@ -174,118 +225,237 @@
                 display: inline-block;
                 margin: 5px 7px;
             }
+
+            .hero {
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
         }
     </style>
 </head>
 
 <body>
 
+<!-- HEADER -->
+
 <header>
-    <div class="logo">THE <span>FIRE</span> GUY</div>
-    <div class="tagline">Fire alarm systems explained from the field.</div>
+
+    <div class="logo">
+        THE <span>FIRE</span> GUY
+    </div>
+
+    <div class="tagline">
+        Fire alarm systems explained from the field.
+    </div>
+
 </header>
 
+
+<!-- NAVIGATION -->
+
 <nav>
-    <a href="#">Home</a>
+
+    <a href="index.html">Home</a>
     <a href="#">Troubleshooting</a>
     <a href="#">Programming</a>
     <a href="#">Code & Design</a>
     <a href="#">Fundamentals</a>
     <a href="#">Career</a>
+
 </nav>
+
+
+<!-- HERO -->
 
 <section class="hero">
 
-    <div class="hero-label">From the Field</div>
+    <div class="hero-label">
+        From the Field
+    </div>
 
-    <h1>Fire alarm knowledge without the textbook language.</h1>
+    <h1>
+        Fire alarm knowledge without the textbook language.
+    </h1>
 
     <p>
         Practical troubleshooting, programming, design concepts and lessons
         learned from years of working with fire alarm systems in the real world.
     </p>
 
-    <a class="button" href="#latest">Read the Latest</a>
+    <a class="button" href="#latest">
+        Read the Latest
+    </a>
 
 </section>
 
+
+<!-- LATEST ARTICLES -->
+
 <section class="section" id="latest">
 
-    <h2 class="section-title">Latest From The Field</h2>
+    <h2 class="section-title">
+        Latest From The Field
+    </h2>
 
     <div class="cards">
 
-        <div class="card">
-            <h3>Coming Soon</h3>
+
+        <!-- ARTICLE #1 -->
+
+        <a href="how-i-found-fire-alarm.html" class="card article-card">
+
+            <div class="article-category">
+                CAREER · FROM THE FIELD
+            </div>
+
+            <h3>
+                How I Accidentally Found a Career in the Fire Alarm Industry
+            </h3>
+
             <p>
-                Real-world fire alarm troubleshooting and lessons learned
-                from problems encountered in the field.
+                A part-time job at a fire safety company unexpectedly turned
+                into a career in troubleshooting, programming and fire alarm systems.
             </p>
-        </div>
+
+            <div class="read-more">
+                Read Article →
+            </div>
+
+        </a>
+
+
+        <!-- FUNDAMENTALS -->
 
         <div class="card">
-            <h3>Fire Alarm Fundamentals</h3>
+
+            <div class="article-category">
+                COMING SOON
+            </div>
+
+            <h3>
+                Fire Alarm Fundamentals
+            </h3>
+
             <p>
                 SLCs, NACs, modules, relays and other concepts explained
                 without assuming you already know the terminology.
             </p>
+
         </div>
 
+
+        <!-- PROGRAMMING -->
+
         <div class="card">
-            <h3>Programming</h3>
+
+            <div class="article-category">
+                COMING SOON
+            </div>
+
+            <h3>
+                Programming
+            </h3>
+
             <p>
                 Addressable systems, databases, logic and the things
                 technicians learn after actually working with them.
             </p>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- CATEGORIES -->
+
 <section class="section">
 
-    <h2 class="section-title">Explore The Fire Guy</h2>
+    <h2 class="section-title">
+        Explore The Fire Guy
+    </h2>
 
     <div class="cards">
 
         <div class="card">
+
             <h3>Troubleshooting</h3>
-            <p>Ground faults, SLC problems, NAC troubles and the weird ones.</p>
+
+            <p>
+                Ground faults, SLC problems, NAC troubles and the weird ones.
+            </p>
+
         </div>
 
+
         <div class="card">
+
             <h3>Programming</h3>
-            <p>Programming concepts, databases and addressable systems.</p>
+
+            <p>
+                Programming concepts, databases and addressable systems.
+            </p>
+
         </div>
 
+
         <div class="card">
+
             <h3>Code & Design</h3>
-            <p>Fire alarm design and code concepts explained from a field perspective.</p>
+
+            <p>
+                Fire alarm design and code concepts explained from a field perspective.
+            </p>
+
         </div>
 
+
         <div class="card">
+
             <h3>Fundamentals</h3>
-            <p>Fire alarm concepts for technicians who want to understand why things work.</p>
+
+            <p>
+                Fire alarm concepts for technicians who want to understand
+                why things work.
+            </p>
+
         </div>
 
+
         <div class="card">
+
             <h3>Career</h3>
-            <p>Training, NICET and building a career in the fire alarm industry.</p>
+
+            <p>
+                Training, NICET and building a career in the fire alarm industry.
+            </p>
+
         </div>
 
+
         <div class="card">
+
             <h3>Field Stories</h3>
-            <p>The problems, fixes and lessons you don't usually find in the manual.</p>
+
+            <p>
+                The problems, fixes and lessons you don't usually find in the manual.
+            </p>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- ABOUT -->
+
 <section class="section about">
 
-    <h2 class="section-title">About The Fire Guy</h2>
+    <h2 class="section-title">
+        About The Fire Guy
+    </h2>
 
     <p>
         The Fire Guy is written by a longtime fire alarm industry professional
@@ -302,14 +472,19 @@
 
 </section>
 
+
+<!-- FOOTER -->
+
 <footer>
 
     © 2026 The Fire Guy
 
     <div class="disclaimer">
+
         The information on this site is provided for educational and informational
         purposes only. Always follow applicable codes, standards, manufacturer
         documentation and requirements of the authority having jurisdiction.
+
     </div>
 
 </footer>
