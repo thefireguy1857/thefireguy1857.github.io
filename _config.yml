@@ -1,0 +1,20 @@
+title: The Fire Guy
+description: Fire alarm systems explained from the field.
+url: "https://thefireguy1857.github.io"
+baseurl: ""
+
+author: The Fire Guy
+
+permalink: /articles/:title/
+
+markdown: kramdown
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - README.md
